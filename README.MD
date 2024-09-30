@@ -1,4 +1,4 @@
-# Project Name - Backend
+# NiSport - Backend
 
 ![Project Logo](https://i.ibb.co.com/2Zt8m6B/white-D1w-Yu8-Wv.png)
 
@@ -34,12 +34,9 @@ Key features include:
 - MongoDB (or any other database)
 
 ## live Link
+```bash
  https://nisports.vercel.app/
 
 ### Clone the repository
 ```bash
 git clone https://github.com/Fahad41816/Ni_Sports_server
-
- 
-
-
