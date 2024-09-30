@@ -33,9 +33,8 @@ Key features include:
 - Node.js (version)
 - MongoDB (or any other database)
 
-## live Link
-```bash
- https://nisports.vercel.app/
+## live Link 
+https://nisports.vercel.app/
 
 ### Clone the repository
 ```bash
