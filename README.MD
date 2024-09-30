@@ -5,12 +5,19 @@
  
 
 ## Project Description
-Project Name is a NiSports that allows users to booking any facility for playing. user can check available date. 
 
-## Features
-- Feature 1: Facility
-- Feature 2: Authentication
-- Feature 3: Bookings
+NISports is a facility booking platform that allows users to book sports or recreational facilities. Users can browse available facilities, check available dates, and book time slots. The platform supports secure online payments via SSLCOMMERZ. 
+
+Once registered and logged in, users can access their personal dashboard to view their booking history, manage bookings, and cancel reservations. The platform provides full control for administrators, who can update facility details, manage bookings, and monitor user activity.
+
+Key features include:
+- User registration and login.
+- Facility browsing and booking.
+- Availability checking and slot booking.
+- Secure payment processing using SSLCOMMERZ.
+- User dashboard with booking history and cancellation options.
+- Admin panel for facility management and booking oversight.
+
 
 ## Technologies Used
 - Node.js
