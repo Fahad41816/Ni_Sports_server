@@ -1,26 +1,16 @@
 # Project Name - Backend
 
-![Project Logo](https://your-logo-url.com)
+![Project Logo](https://i.ibb.co.com/2Zt8m6B/white-D1w-Yu8-Wv.png)
 
-## Table of Contents
-1. [Project Description](#project-description)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [API Documentation](#api-documentation)
-7. [Environment Variables](#environment-variables)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Contact](#contact)
+ 
 
 ## Project Description
-Project Name is a [brief description of your project] that allows users to [mention the core functionality of the backend].
+Project Name is a NiSports that allows users to booking any facility for playing. user can check available date. 
 
 ## Features
-- Feature 1: Description of feature 1
-- Feature 2: Description of feature 2
-- Feature 3: Description of feature 3
+- Feature 1: Facility
+- Feature 2: Authentication
+- Feature 3: Bookings
 
 ## Technologies Used
 - Node.js
@@ -37,4 +27,4 @@ Project Name is a [brief description of your project] that allows users to [ment
 
 ### Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/Fahad41816/Ni_Sports_server
