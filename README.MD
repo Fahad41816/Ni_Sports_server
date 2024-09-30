@@ -21,6 +21,7 @@ Key features include:
 
 ## Technologies Used
 - Node.js
+- TypeScript
 - Express.js
 - MongoDB
 - Mongoose
@@ -32,6 +33,13 @@ Key features include:
 - Node.js (version)
 - MongoDB (or any other database)
 
+## live Link
+ https://nisports.vercel.app/
+
 ### Clone the repository
 ```bash
 git clone https://github.com/Fahad41816/Ni_Sports_server
+
+ 
+
+
