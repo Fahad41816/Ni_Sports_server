@@ -6,10 +6,14 @@ const GetAllFacility = CatchAsync(async (req, res) => {
   
   
   const Search : any  = req.query.search
+  const page : any = req.query.page
+  const limit : any = req.query.limit
+  const filter : any = req.query.filter
+ 
 
-  const AllFacility = await FacilityServices.GetAllFacilityIntoDb(Search)
+  const AllFacility = await FacilityServices.GetAllFacilityIntoDb(Search , page, limit, filter)
 
-  if (AllFacility.length == 0) {
+  if (AllFacility.data.length == 0) {
     return res.status(200).json({
       success: true,
       statusCode: 200,
@@ -22,7 +26,7 @@ const GetAllFacility = CatchAsync(async (req, res) => {
     success: true,
     statusCode: 200,
     message: 'Facilitys retrieved successfully',
-    data: AllFacility,
+    data: AllFacility
   })
 })
 

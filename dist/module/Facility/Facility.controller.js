@@ -18,8 +18,11 @@ const CatchAsync_1 = __importDefault(require("../../utils/CatchAsync"));
 const Facility_service_1 = require("./Facility.service");
 const GetAllFacility = (0, CatchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const Search = req.query.search;
-    const AllFacility = yield Facility_service_1.FacilityServices.GetAllFacilityIntoDb(Search);
-    if (AllFacility.length == 0) {
+    const page = req.query.page;
+    const limit = req.query.limit;
+    const filter = req.query.filter;
+    const AllFacility = yield Facility_service_1.FacilityServices.GetAllFacilityIntoDb(Search, page, limit, filter);
+    if (AllFacility.data.length == 0) {
         return res.status(200).json({
             success: true,
             statusCode: 200,
@@ -31,7 +34,7 @@ const GetAllFacility = (0, CatchAsync_1.default)((req, res) => __awaiter(void 0,
         success: true,
         statusCode: 200,
         message: 'Facilitys retrieved successfully',
-        data: AllFacility,
+        data: AllFacility
     });
 }));
 const GetSingleFacility = (0, CatchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {

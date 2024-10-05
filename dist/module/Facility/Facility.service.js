@@ -15,7 +15,7 @@ const CreateFacilityIntoDb = (FacilityData) => __awaiter(void 0, void 0, void 0,
     const Result = yield Facility_model_1.FacilityModel.create(FacilityData);
     return Result;
 });
-const GetAllFacilityIntoDb = (Search) => __awaiter(void 0, void 0, void 0, function* () {
+const GetAllFacilityIntoDb = (Search, page, Limit, filter) => __awaiter(void 0, void 0, void 0, function* () {
     // Define the type for the query using Mongoose's FilterQuery with your Facility interface
     let Query = { isDeleted: false };
     // Check if there is a search string
@@ -28,9 +28,16 @@ const GetAllFacilityIntoDb = (Search) => __awaiter(void 0, void 0, void 0, funct
             ],
         };
     }
+    const Page = page || 0;
+    const limit = Limit || 0;
+    const skip = (Page - 1) * limit;
     // Execute the query and get the results from the database
-    const Result = yield Facility_model_1.FacilityModel.find(Query);
-    return Result;
+    const Result = yield Facility_model_1.FacilityModel.find(Query).skip(skip).limit(limit);
+    const TotalCount = yield Facility_model_1.FacilityModel.countDocuments({ isDeleted: false });
+    return {
+        data: Result,
+        Total: TotalCount
+    };
 });
 const FindSingleFacility = (id) => __awaiter(void 0, void 0, void 0, function* () {
     const Result = yield Facility_model_1.FacilityModel.findById(id);

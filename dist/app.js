@@ -53,7 +53,7 @@ app.post('/Payment', (req, res) => {
         total_amount: 100,
         currency: 'BDT',
         tran_id: customId, // use unique tran_id for each api call
-        success_url: `http://localhost:5000/PaymentSuccess/${customId}`,
+        success_url: `https://nisports.vercel.app/PaymentSuccess/${customId}`,
         fail_url: 'http://localhost:3030/fail',
         cancel_url: 'http://localhost:3030/cancel',
         ipn_url: 'http://localhost:3030/ipn',
@@ -100,7 +100,7 @@ app.post('/Payment', (req, res) => {
 app.post('/PaymentSuccess/:customId', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const customId = req.params.customId;
     const UpdateBooking = yield Booking_model_1.BookingModel.updateOne({ TranId: customId }, { $set: { isBooked: 'confirmed' } });
-    res.redirect(`http://localhost:5173/PaymentSuccess/${customId}`);
+    res.redirect(`https://client-snowy-tau.vercel.app/PaymentSuccess/${customId}`);
 }));
 app.use(NotFoundHandler_1.default);
 app.use(GlobalErrorHandler_1.default);
